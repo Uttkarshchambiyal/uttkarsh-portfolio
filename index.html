@@ -4,137 +4,388 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uttkarsh Chambiyal - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FEF9F5;
+        }
+        
+        .header {
+            padding: 0 64px;
+        }
+        
+        .nav-top {
+            display: flex;
+            justify-content: flex-end;
+            padding: 32px 32px 0 0;
+        }
+        
+        .zero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 56px;
+            width: 56px;
+            color: white;
+            background-color: #0F172A;
+            border-radius: 50%;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+        
+        .menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 58px;
+            width: 107px;
+            color: white;
+            background-color: #0F172A;
+            border-radius: 40px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .menu:hover {
+            transform: scale(1.08) rotate(2deg);
+        }
+        
+        .nav-end {
+            padding: 0 0 48px;
+        }
+        
+        .name {
+            height: 234px;
+            width: 100%;
+            overflow: visible;
+        }
+        
+        .name1, .name2 {
+            height: 115px;
+            overflow: visible;
+        }
+        
+        .name1 H1, .name2 H1 {
+            font-size: 107px;
+            color: #1E1E21;
+        }
+        
+        .glitch {
+            color: #1E1E21;
+            font-size: clamp(2rem, 10vw, 8rem);
+            white-space: nowrap;
+            font-weight: 900;
+            position: relative;
+            display: inline-block;
+            user-select: none;
+            z-index: 1000;
+        }
+        
+        .location-scroll {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            color: #1e1e21be;
+            padding: 20px 0;
+        }
+        
+        .header-image {
+            width: 100%;
+            height: auto;
+            margin: 40px 0;
+        }
+        
+        .image1 img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            transition: transform 0.5s ease;
+        }
+        
+        .image1 img:hover {
+            transform: scale(1.05);
+        }
+        
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 64px;
+            gap: 90px;
+            border-bottom: 2px solid black;
+            color: #1E1E21;
+        }
+        
+        .aboutme1 {
+            font-size: 32px;
+            line-height: 1.4;
+        }
+        
+        .aboutme2 {
+            border-left: 2px solid black;
+            padding-left: 60px;
+        }
+        
+        .aboutme2 h3 {
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .aboutme2 pre {
+            white-space: normal;
+            font-family: inherit;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .logo {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .logo a {
+            display: inline-block;
+        }
+        
+        .logo img {
+            height: 30px;
+            width: 30px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo img:hover {
+            transform: scale(1.2) rotate(5deg);
+        }
+        
+        .services {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            padding: 64px;
+            gap: 64px;
+        }
+        
+        .whatido {
+            height: auto;
+        }
+        
+        .whatido h3 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .whatido h6 {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            position: relative;
+            padding-left: 50px;
+            border-left: 2px solid #1E1E21;
+        }
+        
+        .whatido-card {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .whatido-card h3 {
+            font-size: 24px;
+        }
+        
+        .whatido-card p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #666;
+        }
+        
+        .whatido-card span {
+            font-size: 12px;
+            color: #999;
+        }
+        
+        .moving-text {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 20px 0;
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+            overflow: hidden;
+        }
+        
+        .moving-text-inner {
+            white-space: nowrap;
+            font-size: 40px;
+            font-weight: 700;
+            animation: marqueeAnimation 14s linear infinite;
+        }
+        
+        @keyframes marqueeAnimation {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        
+        .body {
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+            background: #FEF9F5;
+            border-top: 2px solid #1E1E21;
+            padding: 64px;
+        }
+        
+        .gallery_wrapper {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            width: 100%;
+            max-width: 1200px;
+        }
+        
+        .gallery_wrapper img {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .gallery_wrapper img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                padding: 0 20px;
+            }
+            
+            .name1 H1, .name2 H1 {
+                font-size: 50px;
+            }
+            
+            .about {
+                grid-template-columns: 1fr;
+                padding: 32px 20px;
+                gap: 40px;
+            }
+            
+            .aboutme2 {
+                border-left: none;
+                border-top: 2px solid black;
+                padding: 40px 0 0 0;
+            }
+            
+            .services {
+                grid-template-columns: 1fr;
+                padding: 32px 20px;
+            }
+            
+            .gallery_wrapper {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-brand">Uttkarsh</div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
+    <div class="header">
+        <div class="nav-top">
+            <div class="zero">0</div>
+            <div class="menu">Menu</div>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm Uttkarsh Chambiyal</h1>
-            <p class="subtitle">B.Tech CS Student | Web Developer | Programmer</p>
-            <p class="hero-description">Passionate about building beautiful and functional web applications with modern technologies</p>
-            <a href="#projects" class="btn btn-primary">View My Work</a>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <p>I'm a B.Tech Computer Science student passionate about web development and programming. I love creating responsive, user-friendly web applications and solving complex problems with code.</p>
-                <p>With experience in HTML, CSS, JavaScript, C, and C++, I'm constantly learning and exploring new technologies like Node.js and modern frameworks.</p>
+        <div class="nav-end">
+            <div class="name">
+                <div class="name1"><H1 class="glitch">UttkarXh</H1></div>
+                <div class="name2"><H1 class="glitch">ChambiyaL</H1></div>
+            </div>
+            <div class="location-scroll">
+                <div class="location"><h3>(Bengaluru, Hoskote)</h3></div>
+                <div class="scroll"><h3>scroll down</h3></div>
             </div>
         </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <i class="fas fa-code"></i>
-                    <h3>Languages</h3>
-                    <p>HTML, CSS, JavaScript, C, C++</p>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-palette"></i>
-                    <h3>Frontend</h3>
-                    <p>Bootstrap, Tailwind CSS, Responsive Design</p>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-tools"></i>
-                    <h3>Tools & Platforms</h3>
-                    <p>Git, GitHub, VS Code, Linux</p>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-graduation-cap"></i>
-                    <h3>Other Skills</h3>
-                    <p>Problem Solving, Data Structures, Algorithms</p>
-                </div>
+    </div>
+    
+    <div class="header-image">
+        <div class="image1"><img src="placeholder.jpg" alt="Profile" style="display:none;"></div>
+    </div>
+    
+    <div class="about">
+        <div class="aboutme1">
+            <h2>B.Tech CSE student passionate about coding and learning modern web development technologies.</h2>
+        </div>
+        <div class="aboutme2">
+            <h3>(About Me)</h3>
+            <pre>"Hey, I'm Uttkarsh Chambiyal, a CSE student passionate about creating meaningful digital experiences through web development and design. I enjoy exploring how clean interfaces and thoughtful interactions can improve the way people use technology. Every project I build helps me learn something new, refine my skills, and move closer to becoming the kind of developer who creates work that feels modern, useful, and enjoyable."</pre>
+            <div class="logo">
+                <a href="https://www.instagram.com/uttkarshchambiyal/" target="_blank"><img src="placeholder.jpg" alt="instagram" style="display:none;"></a>
+                <a href="https://www.linkedin.com/in/uttkarsh-chambiyal-3495a8380/" target="_blank"><img src="placeholder.jpg" alt="linkedin" style="display:none;"></a>
+                <a href="mailto:uttkarshchambiyal26@gmail.com"><img src="placeholder.jpg" alt="mail" style="display:none;"></a>
             </div>
         </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Portfolio Website</h3>
-                    <p>A responsive personal portfolio built with HTML, CSS, and JavaScript showcasing my projects and skills.</p>
-                    <div class="project-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                    </div>
-                    <a href="#" class="project-link">View Project →</a>
-                </div>
-                <div class="project-card">
-                    <h3>E-commerce Clone</h3>
-                    <p>Amazon-like e-commerce website featuring product listings, shopping cart, and responsive design.</p>
-                    <div class="project-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>Bootstrap</span>
-                    </div>
-                    <a href="#" class="project-link">View Project →</a>
-                </div>
-                <div class="project-card">
-                    <h3>HackerRank Solutions</h3>
-                    <p>Solutions to various programming challenges focusing on algorithms and data structures in C and C++.</p>
-                    <div class="project-tags">
-                        <span>C</span>
-                        <span>C++</span>
-                        <span>Algorithms</span>
-                    </div>
-                    <a href="https://github.com/Uttkarshchambiyal" target="_blank" class="project-link">View on GitHub →</a>
-                </div>
+    </div>
+    
+    <div class="services">
+        <div class="whatido">
+            <h3>(What i Do)</h3>
+            <h6>I work with HTML, CSS, JavaScript, and Bootstrap to create responsive, user-friendly websites. I also practice C and C++ to build strong programming logic and problem-solving skills.</h6>
+        </div>
+        <div class="card">
+            <div class="whatido-card">
+                <h3>Frontend Web Development</h3>
+                <p>I build simple, modern and responsive web pages using clean HTML, CSS and Bootstrap.</p>
+                <span>HTML · CSS · Bootstrap</span>
+            </div>
+            <div class="whatido-card">
+                <h3>Programming & Problem Solving</h3>
+                <p>I practice writing efficient and structured code using C and C++.</p>
+                <span>C · C++</span>
+            </div>
+            <div class="whatido-card">
+                <h3>UI & Visual Design</h3>
+                <p>I like designing clean and minimal layouts that feel modern.</p>
+                <span>Figma · Canva</span>
+            </div>
+            <div class="whatido-card">
+                <h3>Tools & Collaboration</h3>
+                <p>I work comfortably in VS Code and use GitHub to manage projects.</p>
+                <span>VS Code · GitHub</span>
             </div>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="contact-subtitle">Feel free to reach out for opportunities or just a friendly hello</p>
-            <div class="contact-links">
-                <a href="mailto:your-email@gmail.com" class="contact-btn">
-                    <i class="fas fa-envelope"></i> Email
-                </a>
-                <a href="https://github.com/Uttkarshchambiyal" target="_blank" class="contact-btn">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-                <a href="https://linkedin.com/in/your-profile" target="_blank" class="contact-btn">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2025 Uttkarsh Chambiyal. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
+    </div>
+    
+    <div class="moving-text">
+        <div class="moving-text-inner">• /MY WORK • /MY CREATIONS • /MY PROJECTS • /MY WORK • /MY CREATIONS • /MY PROJECTS •</div>
+    </div>
+    
+    <div class="body">
+        <article class="gallery_wrapper">
+            <img src="placeholder.jpg" alt="Portfolio image 1" style="display:none;">
+            <img src="placeholder.jpg" alt="Portfolio image 2" style="display:none;">
+            <img src="placeholder.jpg" alt="Portfolio image 3" style="display:none;">
+            <img src="placeholder.jpg" alt="Portfolio image 4" style="display:none;">
+            <img src="placeholder.jpg" alt="Portfolio image 5" style="display:none;">
+            <img src="placeholder.jpg" alt="Portfolio image 6" style="display:none;">
+            <img src="placeholder.jpg" alt="Portfolio image 7" style="display:none;">
+            <img src="placeholder.jpg" alt="Portfolio image 8" style="display:none;">
+            <img src="placeholder.jpg" alt="Portfolio image 9" style="display:none;">
+        </article>
+    </div>
 </body>
 </html>
