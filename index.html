@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uttkarsh Chambiyal - Portfolio</title>
+    <title>uttkarsh</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
-            margin: 0;
-            padding: 0;
+            margin: 0%;
+            padding: 0%;
         }
         
         body {
@@ -22,7 +23,7 @@
         
         .nav-top {
             display: flex;
-            justify-content: flex-end;
+            justify-content: end;
             padding: 32px 32px 0 0;
         }
         
@@ -49,12 +50,6 @@
             background-color: #0F172A;
             border-radius: 40px;
             font-size: 20px;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-        
-        .menu:hover {
-            transform: scale(1.08) rotate(2deg);
         }
         
         .nav-end {
@@ -63,18 +58,89 @@
         
         .name {
             height: 234px;
-            width: 100%;
-            overflow: visible;
+            width: 1042px;
         }
         
-        .name1, .name2 {
+        .name1 {
             height: 115px;
-            overflow: visible;
         }
         
-        .name1 H1, .name2 H1 {
+        .name1 H1 {
             font-size: 107px;
             color: #1E1E21;
+        }
+        
+        .name2 H1 {
+            font-size: 107px;
+            color: #1E1E21;
+        }
+        /* make glitch visible on your light background and avoid clipping */
+        
+        .name,
+        .name1,
+        .name2 {
+            overflow: visible;
+            /* allow pseudo-elements to be visible */
+            min-height: 1em;
+            /* avoid zero height issues */
+        }
+        
+         :root {
+            --light-gray: #d6d2c8;
+            --dark-gray: #55524e;
+            --gray: #9b9484;
+            --dark-blue: #2b293e;
+            --light-blue: #35b7da;
+        }
+        
+        #computer {
+            width: 340px;
+            height: 300px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: /* Bottom Section */
+            repeating-linear-gradient(90deg, var(--gray) 0 10px, var(--light-gray) 10px 18px) 258px 236px / 64px 10px, repeating-linear-gradient(90deg, var(--dark-gray) 0 10px, var(--light-gray) 10px 18px) 258px 246px / 64px 38px, linear-gradient(var(--dark-gray), var(--dark-gray)) 166px 264px / 10px 14px, linear-gradient(var(--light-gray) 10px, var(--dark-gray) 10px) 144px 248px / 80px 20px, linear-gradient(90deg, var(--dark-gray) 10px, var(--gray) 10px) 124px 236px / 110px 48px, linear-gradient(90deg, var(--gray) 10px, var(--light-gray) 10px) 90px 230px / 250px 60px, linear-gradient(90deg, var(--gray) 10px, var(--light-gray) 10px) 100px 220px / 240px 80px, linear-gradient(var(--dark-gray), var(--dark-gray)) 10px bottom / 330px 80px, linear-gradient(var(--dark-gray), var(--dark-gray)) left bottom / 320px 70px, /* Top Section */
+            linear-gradient(90deg, var(--gray) 18px, var(--light-gray) 18px 26px, var(--gray) 26px 36px, var(--dark-gray) 36px 122px, var(--light-gray) 122px 160px, var(--gray) 160px) 120px 180px / 170px 10px, linear-gradient(var(--gray) 10px, var(--dark-blue) 10px 150px, var(--gray) 150px) 130px 10px / 150px 160px, linear-gradient(90deg, var(--gray) 10px, var(--dark-blue) 10px 180px, var(--gray) 180px) 110px 30px / 190px 120px, linear-gradient(var(--gray), var(--gray)) 120px 20px / 170px 140px, linear-gradient(var(--light-gray), var(--light-gray)) 110px top / 190px 200px, linear-gradient(90deg, var(--gray) 10px, var(--light-gray) 10px) 90px 10px / 220px 180px, linear-gradient(var(--gray), var(--gray)) 100px top / 200px 200px, linear-gradient(var(--dark-gray), var(--dark-gray)) 40px top / 260px 200px, linear-gradient(90deg, var(--dark-gray) 50%, var(--light-gray) 50%) 30px 10px / 280px 180px, /* Back section */
+            linear-gradient(90deg, var(--dark-gray) 96px, var(--gray) 96px) 70px 210px / 216px 14px, linear-gradient(var(--dark-gray), var(--dark-gray)) 90px 190px / 178px 30px;
+            background-repeat: no-repeat;
+            margin-left: 900px;
+            margin-top: 65px;
+        }
+        
+        #computer::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            top: 95px;
+            left: 175px;
+            background-color: var(--light-blue);
+            animation: hello 3500ms linear infinite forwards alternate;
+        }
+        
+        @keyframes hello {
+            0%,
+            18% {
+                box-shadow: 0 0 0 var(--light-blue), 0 0 0 var(--light-blue), 0 0 0 var(--light-blue), 0 0 0 var(--light-blue), 0 0 0 var(--light-blue), 0 0 0 var(--light-blue), 40px -30px 0 var(--light-blue), 40px -20px 0 var(--light-blue), 10px -30px 0 var(--light-blue), 10px -20px 0 var(--light-blue), 50px 0 0 var(--light-blue), 40px 10px 0 var(--light-blue), 30px 10px 0 var(--light-blue), 20px 10px 0 var(--light-blue), 10px 10px 0 var(--light-blue);
+            }
+            24%,
+            38% {
+                box-shadow: 0 0 0 var(--light-blue), 0 0 0 var(--light-blue), 0 0 0 var(--light-blue), 0 0 0 var(--light-blue), 0 0 0 var(--light-blue), 0 0 0 var(--light-blue), 50px -30px 0 var(--light-blue), 40px -20px 0 var(--light-blue), 0 -30px 0 var(--light-blue), 10px -20px 0 var(--light-blue), 50px 0 0 var(--light-blue), 40px 10px 0 var(--light-blue), 30px 0 0 var(--light-blue), 20px 10px 0 var(--light-blue), 10px 10px 0 var(--light-blue);
+            }
+            44%,
+            58% {
+                box-shadow: 0 0 0 var(--light-blue), 0 0 0 var(--light-blue), 0 0 0 var(--light-blue), 0 0 0 var(--light-blue), 0 0 0 var(--light-blue), 50px -30px 0 var(--light-blue), 50px 0 0 var(--light-blue), 40px 10px 0 var(--light-blue), 30px -20px 0 var(--light-blue), 30px 0 0 var(--light-blue), 30px 10px 0 var(--light-blue), 10px -10px var(--light-blue), 0 -30px 0 var(--light-blue), 0 -20px 0 var(--light-blue), 0 10px 0 var(--light-blue);
+            }
+            64%,
+            78% {
+                box-shadow: 0 0 0 var(--light-blue), 0 0 0 var(--light-blue), 0 0 0 var(--light-blue), 0 0 0 var(--light-blue), 50px -30px 0 var(--light-blue), 50px 0 0 var(--light-blue), 50px 10px 0 var(--light-blue), 30px -30px 0 var(--light-blue), 30px -20px 0 var(--light-blue), 30px 0 0 var(--light-blue), 30px 10px 0 var(--light-blue), 10px -10px var(--light-blue), 0 -30px 0 var(--light-blue), 0 -20px 0 var(--light-blue), 0 10px 0 var(--light-blue);
+            }
+            84%,
+            100% {
+                box-shadow: 50px -30px 0 var(--light-blue), 50px -10px 0 var(--light-blue), 50px 0 0 var(--light-blue), 50px 10px 0 var(--light-blue), 30px -30px 0 var(--light-blue), 30px -20px 0 var(--light-blue), 30px -10px 0 var(--light-blue), 30px 0 0 var(--light-blue), 30px 10px 0 var(--light-blue), 20px -10px 0 var(--light-blue), 10px -10px 0 var(--light-blue), 0 -30px 0 var(--light-blue), 0 -20px 0 var(--light-blue), 0 -10px var(--light-blue), 0 10px 0 var(--light-blue);
+            }
         }
         
         .glitch {
@@ -84,87 +150,236 @@
             font-weight: 900;
             position: relative;
             display: inline-block;
+            line-height: 1;
             user-select: none;
+            cursor: pointer;
+            /* put the base text on a high stacking level to ensure it's always visible */
             z-index: 1000;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .glitch::before,
+        .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: visible;
+            z-index: 100;
+            display: block;
+            color: #fff;
+        }
+        /* use translate3d to get smoother animations but keep pseudo elements lower than the base text */
+        
+        .glitch::before {
+            transform: translate3d(-8px, 0, 0);
+            text-shadow: 10px 0 rgba(0, 255, 255, 0.9);
+            animation: animate-glitch var(--before-duration, 3s) infinite linear alternate-reverse;
+            will-change: transform, clip-path;
+        }
+        
+        .glitch::after {
+            transform: translate3d(8px, 0, 0);
+            text-shadow: -10px 0 rgba(255, 0, 0, 0.9);
+            animation: animate-glitch var(--after-duration, 6s) infinite linear alternate-reverse;
+            will-change: transform, clip-path;
+        }
+        
+        @keyframes animate-glitch {
+            0% {
+                clip-path: inset(20% 0 50% 0);
+            }
+            5% {
+                clip-path: inset(10% 0 60% 0);
+            }
+            10% {
+                clip-path: inset(15% 0 55% 0);
+            }
+            15% {
+                clip-path: inset(25% 0 35% 0);
+            }
+            20% {
+                clip-path: inset(30% 0 40% 0);
+            }
+            25% {
+                clip-path: inset(40% 0 20% 0);
+            }
+            30% {
+                clip-path: inset(10% 0 60% 0);
+            }
+            35% {
+                clip-path: inset(15% 0 55% 0);
+            }
+            40% {
+                clip-path: inset(25% 0 35% 0);
+            }
+            45% {
+                clip-path: inset(30% 0 40% 0);
+            }
+            50% {
+                clip-path: inset(20% 0 50% 0);
+            }
+            55% {
+                clip-path: inset(10% 0 60% 0);
+            }
+            60% {
+                clip-path: inset(15% 0 55% 0);
+            }
+            65% {
+                clip-path: inset(25% 0 35% 0);
+            }
+            70% {
+                clip-path: inset(30% 0 40% 0);
+            }
+            75% {
+                clip-path: inset(40% 0 20% 0);
+            }
+            80% {
+                clip-path: inset(20% 0 50% 0);
+            }
+            85% {
+                clip-path: inset(10% 0 60% 0);
+            }
+            90% {
+                clip-path: inset(15% 0 55% 0);
+            }
+            95% {
+                clip-path: inset(25% 0 35% 0);
+            }
+            100% {
+                clip-path: inset(30% 0 40% 0);
+            }
         }
         
         .location-scroll {
             display: flex;
-            width: 100%;
+            width: 1332px;
+            height: 40px;
             justify-content: space-between;
             align-items: center;
             color: #1e1e21be;
-            padding: 20px 0;
         }
         
         .header-image {
-            width: 100%;
-            height: auto;
-            margin: 40px 0;
+            height: 100%;
+            width: 1470px;
         }
         
         .image1 img {
+            height: 100%;
             width: 100%;
-            height: auto;
             object-fit: contain;
+            object-position: center;
+            overflow: hidden;
             transition: transform 0.5s ease;
         }
         
         .image1 img:hover {
-            transform: scale(1.05);
+            transform: scale(1.1);
+        }
+        
+        .menu {
+            transition: transform 0.3s ease;
+        }
+        
+        .menu:hover {
+            transform: scale(1.08) rotate(2deg);
         }
         
         .about {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            padding: 64px;
+            grid-template-columns: 800px 400px;
+            padding: 64px 64px;
+            width: 1333px;
+            color: #1E1E21;
             gap: 90px;
             border-bottom: 2px solid black;
-            color: #1E1E21;
         }
         
         .aboutme1 {
-            font-size: 32px;
-            line-height: 1.4;
+            width: 800px;
+            max-width: 100%;
+            height: auto;
+            font-size: 40px;
+            overflow: unset;
+            color: #1E1E21;
+        }
+        
+        .shiny-text {
+            color: #b5b5b5a4;
+            /* Adjust this color to change intensity/style */
+            background: linear-gradient( 120deg, rgb(140, 0, 255) 40%, rgba(255, 255, 255, 0.8) 50%, rgb(0, 0, 0) 60%);
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            display: inline-block;
+            animation: shine 7s linear infinite;
+        }
+        
+        @keyframes shine {
+            0% {
+                background-position: 100%;
+            }
+            100% {
+                background-position: -100%;
+            }
+        }
+        
+        .shiny-text.disabled {
+            animation: none;
         }
         
         .aboutme2 {
             border-left: 2px solid black;
             padding-left: 60px;
+            align-items: center;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 0;
         }
         
-        .aboutme2 h3 {
-            font-weight: 600;
-            margin-bottom: 20px;
+        h2 {
+            font-weight: 100;
         }
         
         .aboutme2 pre {
             white-space: normal;
-            font-family: inherit;
+            overflow-wrap: break-word;
+            word-break: break-word;
+            margin: 0;
+            padding: 0;
             font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 20px;
+            line-height: 1.4;
         }
         
         .logo {
             display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        
-        .logo a {
-            display: inline-block;
+            margin-top: 10px;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease;
         }
         
         .logo img {
             height: 30px;
             width: 30px;
-            cursor: pointer;
-            transition: transform 0.3s ease;
+            margin-right: 10px;
         }
         
-        .logo img:hover {
-            transform: scale(1.2) rotate(5deg);
+        .logo button {
+            border: none;
+            margin-right: 10px;
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+        }
+        
+        img:hover {
+            cursor: pointer;
+            transform: skew(6deg);
         }
         
         .services {
@@ -175,217 +390,298 @@
         }
         
         .whatido {
-            height: auto;
+            align-items: center;
+            text-align: center;
+            height: 492px;
+            width: 340px;
         }
         
         .whatido h3 {
             font-size: 30px;
-            margin-bottom: 20px;
         }
         
         .whatido h6 {
-            font-size: 18px;
-            color: #666;
-            line-height: 1.6;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 24px;
+            padding-top: 20px;
+            color: purple;
         }
         
         .card {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            grid-template-rows: auto;
+            gap: 60px 60px;
+            height: 492px;
+            width: 801px;
             position: relative;
             padding-left: 50px;
             border-left: 2px solid #1E1E21;
         }
         
+        .card::after {
+            content: "";
+            position: absolute;
+            left: 50px;
+            right: 0;
+            top: 45%;
+            /* Middle of the grid */
+            height: 2px;
+            background-color: #1E1E21;
+            transform: translateY(-50%);
+            padding-left: 10px;
+        }
+        
         .whatido-card {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            padding: 2px;
+            height: 171px;
+            width: 335px;
         }
         
         .whatido-card h3 {
-            font-size: 24px;
+            font-size: 32px;
         }
         
-        .whatido-card p {
-            font-size: 14px;
-            line-height: 1.6;
-            color: #666;
-        }
-        
-        .whatido-card span {
-            font-size: 12px;
-            color: #999;
+        .card2,
+        .card4 {
+            padding-left: 50px;
+            border-left: 2px solid #1E1E21;
         }
         
         .moving-text {
             width: 100%;
             display: flex;
+            justify-content: center;
             align-items: center;
             padding: 20px 0;
             border-top: 2px solid black;
             border-bottom: 2px solid black;
+            gap: 40px;
             overflow: hidden;
+        }
+        
+        .stoke {
+            color: transparent;
+            -webkit-text-stroke: 1px;
+            -webkit-text-stroke-color: #000000;
+        }
+        
+        .moving-text-wrapp {
+            display: flex;
+            gap: 40px;
         }
         
         .moving-text-inner {
             white-space: nowrap;
-            font-size: 40px;
+            font-size: clamp(20px, 6vw, 60px);
             font-weight: 700;
+        }
+        
+        .moving-text .moving-text-inner {
+            display: inline-block;
             animation: marqueeAnimation 14s linear infinite;
         }
         
         @keyframes marqueeAnimation {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-100%); }
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+        
+        @media (max-width: 900px) {
+            .about {
+                grid-template-columns: 1fr;
+                padding: 32px 16px;
+            }
+            .moving-text {
+                padding: 12px 8px;
+            }
+            .moving-text-inner {
+                font-size: clamp(16px, 5vw, 36px);
+            }
         }
         
         .body {
+            margin: 0;
             display: grid;
             place-items: center;
-            min-height: 100vh;
+            height: 100svh;
+            height: 100vh;
             background: #FEF9F5;
             border-top: 2px solid #1E1E21;
-            padding: 64px;
         }
         
         .gallery_wrapper {
+            --img-size: calc(100px - 0.5rem / 2);
             display: grid;
-            gap: 20px;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            width: 100%;
-            max-width: 1200px;
+            gap: 0.5rem;
+            grid-template-columns: repeat(6, var(--img-size));
+            grid-template-rows: repeat(4, var(--img-size));
         }
         
         .gallery_wrapper img {
-            width: 100%;
+            max-width: 100%;
             aspect-ratio: 1;
             object-fit: cover;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
+            grid-column: span 2;
+            border-radius: 0.5rem;
+            clip-path: path( "M 80 20 C 100 0 100 0 120 20 C 140 40 160 60 180 80 C 200 100 200 100 180 120 C 160 140 140 160 120 180 C 100 200 100 200 80 180 C 60 160 40 140 20 120 C 0 100 0 100 20 80 Z");
+            transition: filter 500ms, clip-path 500ms;
+        }
+        
+        .gallery_wrapper img:nth-of-type(4),
+        .gallery_wrapper img:nth-of-type(9) {
+            grid-column: 2 / span 2;
         }
         
         .gallery_wrapper img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            z-index: 100;
+            clip-path: path( "M 0 0 C 100 0 100 0 200 0 C 200 50 200 50 200 80 C 200 100 200 100 200 120 C 200 150 200 150 200 200 C 100 200 100 200 0 200 C 0 150 0 150 0 120 C 0 100 0 100 0 80 Z");
         }
         
-        @media (max-width: 768px) {
-            .header {
-                padding: 0 20px;
-            }
-            
-            .name1 H1, .name2 H1 {
-                font-size: 50px;
-            }
-            
-            .about {
-                grid-template-columns: 1fr;
-                padding: 32px 20px;
-                gap: 40px;
-            }
-            
-            .aboutme2 {
-                border-left: none;
-                border-top: 2px solid black;
-                padding: 40px 0 0 0;
-            }
-            
-            .services {
-                grid-template-columns: 1fr;
-                padding: 32px 20px;
-            }
-            
-            .gallery_wrapper {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        .gallery_wrapper img:not(:hover) {
+            animation: zIndexFix 500ms;
+        }
+        
+        .gallery_wrapper:hover>img {
+            filter: brightness(0.5) saturate(0.5);
+        }
+        
+        .gallery_wrapper>img:hover {
+            filter: brightness(1) saturate(1.5);
+        }
+        
+        @keyframes zIndexFix {
+            0%,
+            100% {
+                z-index: 10;
             }
         }
     </style>
 </head>
+
 <body>
     <div class="header">
         <div class="nav-top">
-            <div class="zero">0</div>
+            <div class="zero">
+                <P>0</P>
+            </div>
             <div class="menu">Menu</div>
         </div>
         <div class="nav-end">
             <div class="name">
-                <div class="name1"><H1 class="glitch">UttkarXh</H1></div>
-                <div class="name2"><H1 class="glitch">ChambiyaL</H1></div>
+                <div class="name1">
+                    <H1 class="glitch" data-text="UttkarXh">UttkarXh</H1>
+                    <div id="computer"></div>
+                </div>
+                <div class="name2">
+                    <H1 class="glitch" data-text="ChambiyaL">ChambiyaL</H1>
+                </div>
             </div>
             <div class="location-scroll">
-                <div class="location"><h3>(Bengaluru, Hoskote)</h3></div>
-                <div class="scroll"><h3>scroll down</h3></div>
+                <div class="location">
+                    <h3>(Bengaluru, hoskote)</h3>
+                </div>
+                <div class="scroll">
+                    <h3>scroll down</h3>
+                </div>
             </div>
         </div>
     </div>
-    
     <div class="header-image">
-        <div class="image1"><img src="placeholder.jpg" alt="Profile" style="display:none;"></div>
+        <div class="image1"><img src="9249ba43-1a8a-480d-a2ff-0f4f4eeb2a08.JPG" alt="image1"></div>
     </div>
-    
     <div class="about">
         <div class="aboutme1">
-            <h2>B.Tech CSE student passionate about coding and learning modern web development technologies.</h2>
+            <h2 class="shiny-text" data-text="B.Tech CSE student passionate about coding and learning modern web development technologies.">B.Tech CSE student passionate about coding and learning modern web development technologies.</h2>
         </div>
         <div class="aboutme2">
             <h3>(About Me)</h3>
-            <pre>"Hey, I'm Uttkarsh Chambiyal, a CSE student passionate about creating meaningful digital experiences through web development and design. I enjoy exploring how clean interfaces and thoughtful interactions can improve the way people use technology. Every project I build helps me learn something new, refine my skills, and move closer to becoming the kind of developer who creates work that feels modern, useful, and enjoyable."</pre>
+            <pre>“Hey, I’m Uttkarsh Chambiyal, a CSE student passionate about creating meaningful digital experiences through web development and design. I enjoy exploring how clean interfaces and thoughtful interactions can improve the way people use technology. Every project I build helps me learn something new, refine my skills, and move closer to becoming the kind of developer who creates work that feels modern, useful, and enjoyable.”</pre>
             <div class="logo">
-                <a href="https://www.instagram.com/uttkarshchambiyal/" target="_blank"><img src="placeholder.jpg" alt="instagram" style="display:none;"></a>
-                <a href="https://www.linkedin.com/in/uttkarsh-chambiyal-3495a8380/" target="_blank"><img src="placeholder.jpg" alt="linkedin" style="display:none;"></a>
-                <a href="mailto:uttkarshchambiyal26@gmail.com"><img src="placeholder.jpg" alt="mail" style="display:none;"></a>
+                <div class="logo1">
+                    <a href="https://www.instagram.com/uttkarshchambiyal/" target="_blank"><img src="instagram.png" alt="instagram"></a>
+                    </button>
+                </div>
+                <div class="logo2">
+                    <a href="https://www.linkedin.com/in/uttkarsh-chambiyal-3495a8380/" target="_blank"><img src="linkdin.png" alt="linkdin"></a>
+                </div>
+                <div class="logo3">
+                    <a href="mailto:uttkarshchambiyal26@gmail.com"><img src="gmail.png" alt="mail"></a>
+                </div>
             </div>
         </div>
     </div>
-    
     <div class="services">
         <div class="whatido">
             <h3>(What i Do)</h3>
-            <h6>I work with HTML, CSS, JavaScript, and Bootstrap to create responsive, user-friendly websites. I also practice C and C++ to build strong programming logic and problem-solving skills.</h6>
+            <h6>I work with HTML, CSS, JavaScript, and Bootstrap to create responsive, user-friendly websites. I also practice C and C++ to build strong programming logic and problem-solving skills. My focus is on improving my development abilities, writing
+                clean code, and building projects that help me grow as a developer.</h6>
         </div>
         <div class="card">
-            <div class="whatido-card">
+            <div class="whatido-card card1">
                 <h3>Frontend Web Development</h3>
-                <p>I build simple, modern and responsive web pages using clean HTML, CSS and Bootstrap.</p>
+                <p>I build simple, modern and responsive web pages using clean HTML, CSS and Bootstrap. I focus on layout, typography and basic animations to make interfaces feel smooth and usable.</p>
                 <span>HTML · CSS · Bootstrap</span>
             </div>
-            <div class="whatido-card">
+            <div class="whatido-card card2">
                 <h3>Programming & Problem Solving</h3>
-                <p>I practice writing efficient and structured code using C and C++.</p>
+                <p>I practice writing efficient and structured code using C and C++. I enjoy breaking problems into smaller steps and improving the way I think about logic.</p>
                 <span>C · C++</span>
             </div>
-            <div class="whatido-card">
+            <div class="whatido-card card3">
                 <h3>UI & Visual Design</h3>
-                <p>I like designing clean and minimal layouts that feel modern.</p>
+                <p>I like designing clean and minimal layouts that feel modern. I use tools like Figma and Canva to experiment with colors, spacing and typography before building them in code.</p>
                 <span>Figma · Canva</span>
             </div>
-            <div class="whatido-card">
+            <div class="whatido-card card4">
                 <h3>Tools & Collaboration</h3>
-                <p>I work comfortably in VS Code and use GitHub to manage projects.</p>
+                <p>I work comfortably in VS Code and use GitHub to manage and share my projects. I am learning how to use version control properly for future team and open-source work</p>
                 <span>VS Code · GitHub</span>
             </div>
         </div>
     </div>
-    
     <div class="moving-text">
-        <div class="moving-text-inner">• /MY WORK • /MY CREATIONS • /MY PROJECTS • /MY WORK • /MY CREATIONS • /MY PROJECTS •</div>
+
+        <div class="moving-text-wrapp">
+            <div class="moving-text-inner">
+                • /MY WORK • <span class="stoke">/MY CREATIONS</span> • /MY PROJECTS
+            </div>
+            <div class="moving-text-inner">
+                • /MY WORK • <span class="stoke">/MY CREATIONS</span> • /MY PROJECTS
+            </div>
+        </div>
     </div>
-    
     <div class="body">
         <article class="gallery_wrapper">
-            <img src="images/6E3D1549-857A-472B-9A9A-CBD2279C11BA.JPGt="Portfolio image 1" style="display:none;">
-            <img src="images/6FEFB276-FFF8-4677-8A6E-752F3AFC92B2.PNGt="Portfolio image 2" style="display:none;">
-            <img src="images/8BE7868F-901A-4E45-843E-2416D8027C91.JPGt="Portfolio image 3" style="display:none;">
-            <img src="images/9249ba43-1a8a-480d-a2ff-0f4f4eeb2a08.JPGt="Portfolio image 4" style="display:none;">
-            <img src="images/IMG_0026.JPGt="Portfolio image 5" style="display:none;">
-            <img src="images/WhatsApp Image 2025-12-12 at 11.42.02 (1).jpegt="Portfolio image 6" style="display:none;">
-            <img src="images/WhatsApp Image 2025-12-12 at 11.42.02 (2).jpegt="Portfolio image 7" style="display:none;">
-            <img src="images/WhatsApp Image 2025-12-12 at 11.42.02 (3).jpegt="Portfolio image 8" style="display:none;">
-            <img src="images/WhatsApp Image 2025-12-12 at 11.42.02.jpegt="Portfolio image 9" style="display:none;">
+
+            <img src="WhatsApp Image 2025-12-12 at 11.42.02 (1).jpeg" alt="Balloon with controled fire">
+            <img src="WhatsApp Image 2025-12-12 at 11.42.02 (2).jpeg" alt="Minimalists catchphrase">
+            <img src="WhatsApp Image 2025-12-12 at 11.42.02 (3).jpeg" alt="Hiking Directional Signs">
+
+            <img src="WhatsApp Image 2025-12-12 at 11.42.02.jpeg" alt="drinks">
+            <img src="WhatsApp Image 2025-12-12 at 11.42.03 (1).jpeg" alt="breakfast">
+
+            <img src="WhatsApp Image 2025-12-12 at 11.42.03.jpeg" alt="Alpine mountains under a clear sky">
+            <img src="6FEFB276-FFF8-4677-8A6E-752F3AFC92B2.PNG" alt="Gradient Glowing Laptop">
+            <img src="WhatsApp Image 2025-12-12 at 18.50.47 (1).jpeg" alt="Staples container">
+
+            <img src="WhatsApp Image 2025-12-12 at 18.50.47.jpeg" alt="the island">
+            <img src="WhatsApp Image 2025-12-12 at 18.51.07.jpeg" alt="Crystal Tower">
+
+            <img src="WhatsApp Image 2025-12-12 at 18.51.26.jpeg" alt="Car with man on death valley">
+            <img src="6E3D1549-857A-472B-9A9A-CBD2279C11BA.JPG" alt="christmas elf looking dog">
+            <img src="8BE7868F-901A-4E45-843E-2416D8027C91.JPG" alt="interior design">
+
         </article>
     </div>
+
 </body>
+
 </html>
